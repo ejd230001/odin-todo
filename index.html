@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin To-Do</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-left">
+                <img class="sidebar-img" src="339b52adb4489e20074b.png">
+                <h2 class="sidebar-header-name">Chicco</h2>
+            </div>
+            <div class="sidebar-right">
+                <img class="bell" src="ec3a310005d1c0888bc9.svg">
+                <img class="panel" src="404f8578a5975fc995d9.svg">
+            </div>
+        </div>
+
+        <div class="project-list">
+            <div class="add-project">
+                <button class="add-project-btn">+</button>
+                <div class="add-project-btn-text">Add Project</div>
+            </div>
+            <h2 class="project-list-header">
+                <img class="project-list-header-img" src="bf1f240722863499a4d3.svg">
+                <div class="project-list-header-title">My Projects</div>
+            </h2>
+            <ul class="project-list-items">
+                <li class="project-item">Default Project</li>
+                <li class="project-item">Groceries</li>
+                <li class="project-item">Appointments</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="project-name">Default Project</h1>
+        <h2 class="task-list-header">Task List</h2>
+        <ul class="task-list">
+            <li class="task-item">
+                <input type="checkbox" id="task-1">
+                <label for="task-1" class="task-item-label">
+                    <span class="custom-checkbox"></span>
+                    <div class="task-info">
+                        <div class="task-text">Do 30 minutes of yoga</div>
+                        <div class="task-due-date">7:30 AM</div>
+                    </div>
+                </label>
+                <div class="task-edit">...</div>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" id="task-2">
+                <label for="task-2" class="task-item-label">
+                    <span class="custom-checkbox"></span>
+                    <div class="task-info">
+                        <div class="task-text">Dentist Appointment</div>
+                        <div class="task-due-date">10:00 AM</div>
+                    </div>
+                </label>
+                <div class="task-edit">...</div>
+            </li>
+            <li class="task-item">
+                <input type="checkbox" id="task-3">
+                <label for="task-3" class="task-item-label">
+                    <span class="custom-checkbox"></span>
+                    <div class="task-info">
+                        <div class="task-text">Buy bread</div>
+                        <div class="task-due-date">5:30 AM</div>
+                    </div>
+                </label>
+                <div class="task-edit">...</div>
+            </li>
+        </ul>
+        <div class="add-task">
+                <button class="add-task-btn">+</button>
+                <div class="add-task-btn-text">Add task</div>
+        </div>
+    </div>
+    
+    <dialog class="project-add-modal">
+        <form action="" class="project-add-form">
+            <label for="project-add-input-name">Project Name</label>
+            <input type="text" id="project-add-input-name">
+            <button type="submit" class="project-add-submit">Submit</button>
+            <button class="project-add-cancel">Cancel</button>
+        </form>
+    </dialog>
+    
+    <dialog class="task-add-modal">
+        <form action="" class="task-add-form">
+            <label for="task-add-input-name">Task Name</label>
+            <input type="text" id="task-add-input-name">
+            <label for="task-add-input-description">Description</label>
+            <textarea id="task-add-input-description"></textarea>
+            <label for="task-add-input-date">Due Date</label>
+            <input type="date" id="task-add-input-date">
+            <label for="task-add-input-priority">Priority</label>
+            <select id="task-add-input-priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <div class="task-add-buttons">
+                <button type="submit" class="task-add-submit">Submit</button>
+                <button class="task-add-cancel">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="task-info-modal">
+        <div class="task-info-content">
+            <p class="current-task-name">Do 30 minutes of yoga</p>
+            <div class="current-task-bottom">
+                <p class="current-task-date">Due: 9-27-2004</p>
+                <p class="current-task-priority">Priority: High</p>
+            </div>
+            <p class="current-task-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam sunt error consequuntur animi voluptate cupiditate doloremque quibusdam commodi nesciunt, maiores, laudantium quae. Labore sit quae quasi facere, distinctio quas culpa.</p>
+            <div class="current-task-buttons">
+                <button class="current-task-delete">Mark Complete</button>
+                <button class="current-task-edit">Edit</button>
+                <button class="current-task-cancel">Cancel</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="task-edit-modal">
+        <form action="" class="task-edit-form">
+            <label for="task-edit-input-name">Task Name</label>
+            <input type="text" id="task-edit-input-name">
+            <label for="task-edit-input-description">Description</label>
+            <textarea id="task-edit-input-description"></textarea>
+            <label for="task-edit-input-date">Due Date</label>
+            <input type="date" id="task-edit-input-date">
+            <label for="task-edit-input-priority">Priority</label>
+            <select id="task-edit-input-priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <div class="task-edit-buttons">
+                <button type="submit" class="task-edit-submit">Submit</button>
+                <button class="task-edit-cancel">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>
