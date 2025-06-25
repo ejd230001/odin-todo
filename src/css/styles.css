@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'hindregular';
+    src: url('../fonts/hind-regular-webfont.woff') format('woff');
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    font-family: "hindregular"
+}
+
+.sidebar {
+    background-color: #fcfaf8;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.sidebar-img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.sidebar-header-name {
+    font-weight: 600;
+}
+
+.sidebar-right {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.bell, .panel {
+    width: 25px;
+}
+
+.add-project {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.add-project-btn {
+    background-color: #dd4c41;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button {
+    font-family: "hindregular";
+}
+
+.add-project-btn-text {
+    color: #dd4c41;
+    font-weight: 600;
+}
+
+.project-list-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 10px;
+}
+
+.project-list-header-img {
+    height: 30px;
+    width: 30px;
+}
+
+.project-list-header-title {
+    font-weight: bold;
+    color: grey;
+}
+
+.project-list-items {
+    list-style-type: circle;
+    position: relative;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.project-item {
+    cursor: pointer;
+}
+
+.current-project {
+    font-weight: bold;
+}
+
+.content {
+    padding: calc(25px + 3.5rem) 3rem;
+}
+
+.project-name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.task-list-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid lightgrey;
+}
+
+.task-item {
+    display: flex;
+    padding: 1rem 0rem;
+    border-bottom: 2px solid lightgrey;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+    background: lightblue;
+    box-shadow: inset 0 0 0px 2px white;
+}
+
+.task-item-label {
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid grey;
+    border-radius: 50%;
+}
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.task-due-date {
+    color: green;
+}
+
+.task-edit {
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-left: .25rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.add-task-btn {
+    padding: 0;
+    border: 0;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: 0;
+    color: #dd4c41;
+    cursor: pointer;
+}
+
+.add-task-btn-text {
+    color: grey;
+}
+
+.project-add-modal, .task-add-modal, .task-info-modal, .task-edit-modal {
+    border: 0;
+    border-radius: 8px;
+}
+
+.task-add-form, .task-edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-add-form input, .task-add-form textarea, .task-add-form select,
+.task-edit-form input, .task-edit-form textarea, .task-edit-form select {
+    margin-bottom: 1rem;
+}
+
+.task-info-modal {
+    height: 30vh;
+    width: 80vh;
+    border: 3px solid green;
+}
+
+.task-info-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.current-task-name {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+
+.current-task-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    color: grey;
+}
+
+.current-task-buttons {
+    margin-top: auto;
+}
+
+
+
+
+
