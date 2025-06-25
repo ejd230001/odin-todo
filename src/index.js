@@ -1,6 +1,6 @@
 import "./css/reset.css"
 import "./css/styles.css"
-import {createProject, createTask, removeTask, editTask, getProjectArr} from "./js/class.js"
+import {createProject, createTask, removeTask, editTask, getProjectArr, loadProjectArr} from "./js/class.js"
 import {showAddProject, hideAddProject, showAddTask, hideAddTask, showTaskInfo, hideTaskInfo, showTaskEdit, hideTaskEdit} from "./js/modal.js"
 
 let currentProject = null;
@@ -9,14 +9,17 @@ let currentTask = null;
 function initializePage() {
     setUpEventListeners();
 
-    currentProject = createProject("Default Project");
-    createProject("Groceries");
-    createProject("Appointments");
+    if(!loadProjectArr()) {
+        currentProject = createProject("Default Project");
+        createProject("Groceries");
+        createProject("Appointments");
+        createTask(currentProject, "Do 30 minutes of yoga", "loremalskdfasdflkasjfla", "2004-09-27", "High");
+        createTask(currentProject, "Dentist Appointment", "aklsdjlk", "2005-11-11", "High");
+        createTask(currentProject, "Buy Bread", "askldjlak", "2005-06-11", "High");
+    }
+    else
+        currentProject = getProjectArr()[0];
     renderProjectList();
-
-    createTask(currentProject, "Do 30 minutes of yoga", "loremalskdfasdflkasjfla", "2004-09-27", "High");
-    createTask(currentProject, "Dentist Appointment", "aklsdjlk", "2005-11-11", "High");
-    createTask(currentProject, "Buy Bread", "askldjlak", "2005-06-11", "High");
     renderCurrentProjectTasks(currentProject);
 }
 
